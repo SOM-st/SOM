@@ -82,7 +82,10 @@ System = (
     "Time"
     time  = primitive
     ticks = primitive      "returns the microseconds since start"
-    
+
+    sleep: secs = ( self sleepMillis: secs * 1000 )
+    sleepMillis: millis = primitive
+
     "Force Garbage Collection"
     fullGC = primitive
     
