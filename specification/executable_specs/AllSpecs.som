@@ -1,0 +1,9 @@
+AllSpecs = TestHarness (
+  tests = (
+    | l1 |
+    l1 := Vector new.
+    l1 append: IntSpec.
+    ^ l1
+  )
+
+)

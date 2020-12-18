@@ -103,4 +103,14 @@ Object = nil (
     instVarAt: idx put: obj = primitive
     instVarNamed: sym       = primitive
 
+    isKindOf: class = (
+      | superclass |
+      self class == class ifTrue: [ ^ true ].
+      
+      
+      [(superclass := self class superclass) == nil] whileFalse: [
+        superclass == class ifTrue: [ ^ true ] ].
+
+      ^ false
+    )
 )

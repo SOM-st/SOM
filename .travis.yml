@@ -54,7 +54,7 @@ jobs:
       name: ykSOM
       dist: bionic
       rust: [nightly]
-      env: REPO=yksom.git  BUILD="cargo build"  SOM="cargo run -- " SOM_TESTS="--cp ../Smalltalk ../TestSuite/TestHarness.som"
+      env: REPO=yksom.git  BUILD="cargo build"  SOM="cargo run -- " SOM_TESTS="--cp ../Smalltalk ../TestSuite/TestHarness.som" SOM_SPECS="--cp ../Smalltalk:../TestSuite:../specification/executable_specs ../specification/executable_specs/AllSpecs.som"
       
 
   # allow_failures:
@@ -105,4 +105,13 @@ script:
       
       echo "$SOM $SOM_TESTS"
       eval "$SOM $SOM_TESTS"
+      
+      echo Run Specs
+      if [ "$SOM_SPECS" == "" ]
+      then
+        export SOM_SPECS="-cp ../Smalltalk:../TestSuite:../specification/executable_specs AllSpecs"
+      fi
+      
+      echo "$SOM $SOM_SPECS"
+      eval "$SOM $SOM_SPECS"
     fi

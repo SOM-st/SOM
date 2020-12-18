@@ -95,15 +95,29 @@ TestHarness = (
     )
 
     runOneSuite: name = (
-      | testName runner |
+      | testName runner totalTestNum successfulTestNum unsupportedTestNum totalAssertionNum |
       testName := name.
-      (testName endsWith: 'Test') ifFalse: [
+      ((testName endsWith: 'Test') or: [testName endsWith: 'Spec']) ifFalse: [
         testName := testName + 'Test'].
 
       runner := TestRunner new.
       runner initializeOn: (system resolve: testName asSymbol).
       runner run.
-      runner hasFailures ifTrue: [system exit: 1]
+      
+      totalTestNum       := runner expectedPasses.
+      unsupportedTestNum := runner actualUnsupported.
+      successfulTestNum  := runner actualPasses.
+      totalAssertionNum  := runner numAsserts.
+      
+      'Number of unsupported optionals: ' print.
+      unsupportedTestNum println.
+      'Number of assertions tested:     ' print.
+      totalAssertionNum println.
+
+      (failOnUnsupportedOptionals and: [unsupportedTestNum > 0])
+        ifTrue: [system exit: 1].
+      totalTestNum = successfulTestNum
+        ifFalse: [system exit: 1].
     )
 
     run: args = (

@@ -1,0 +1,27 @@
+Specification = TestCase (
+
+  expect: actual toEqual: expected = (
+    self assert: expected = actual
+         description: [self comparingStringBetween: expected and: actual]
+  )
+  
+  expect: actual toBe: expected = (
+    self assert: actual == expected
+         description: [self comparingStringBetween: expected and: actual]
+  )
+  
+  expect: actual toEqual: double within: epsilon = (
+    self assert: double - actual < epsilon
+         description: ['Expected ' + actual asString + ' to equal ' + double asString + ' within: ' + epsilon asString]
+  )
+  
+  expect: actual toBeGreaterThan: expected = (
+    self assert: actual > expected
+         description: ['Expected ' + actual asString + ' to be greater than ' + expected]
+  )
+
+  expect: actual toBeKindOf: class = (
+    self assert: (actual isKindOf: class)
+         description: ['Expected ' +  actual asString + ' to be of class ' + class asString]
+  )
+)

@@ -1,2 +1,8 @@
 Smalltalk/SOMCore.csp
-
+specification/*.class
+specification/*.java
+specification/*.tokens
+specification/*.interp
+specification/are-we-fast-yet
+specification/*.jar
+/SOM
