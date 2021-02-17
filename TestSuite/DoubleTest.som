@@ -43,7 +43,7 @@ DoubleTest = TestCase (
   )
   
   testRound = (
-    self assert:   1 equals:     (5//10) round.
+    self assert:   0 equals:     (5//10) round.
     self assert:   1 equals:    (14//10) round.
     self assert: 445 equals: (44534//100) round.
   )
