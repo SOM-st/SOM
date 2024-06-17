@@ -52,6 +52,24 @@ ReflectionTest = TestCase (
     self assert: 28 equals: 5 + (23 perform: #value).
   )
   
+  testInvokeOn = (
+    | m result aGetter aSetter obj |
+    m := Object methods at: 1.
+    result := m invokeOn: 23 with: #().
+    self assert: Integer is: result.
+    
+    "Grab #a and #a: and make sure we got the right ones"
+    aGetter := ClassC methods at: 1.
+    aSetter := ClassC methods at: 2.
+    
+    self assert: #a  is: aGetter signature.
+    self assert: #a: is: aSetter signature.
+    
+    obj := ClassC new.
+    aSetter invokeOn: obj with: #(55).
+    self assert: 55 equals: (aGetter invokeOn: obj with: #()).
+  )
+  
   testInstVarAtAndPut = (
     | tmp |
     "Testing #at: and #at:put:"
