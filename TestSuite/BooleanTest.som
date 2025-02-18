@@ -161,21 +161,21 @@ BooleanTest = TestCase (
       self assert: (nil ifNil: [ true ]).
       self deny:   (nil ifNil: [ false ]).
 
-      self assert: (self ifNil: [ #notExec ]) is: self.
-      self assert: (self ifNil: [ #notExec ]) is: self.
+      self assert: #rcvr is: (#rcvr ifNil: [ #notExec ]).
+      self assert: #rcvr is: (#rcvr ifNil: [ #notExec ]).
     )
 
     testIfNotNil = (
       self assert: (self ifNotNil: [ true ]).
       self deny:   (self ifNotNil: [ false ]).
 
-      self assert: (nil ifNotNil: [ #notExec ]) is: nil.
-      self assert: (nil ifNotNil: [ #notExec ]) is: nil.
+      self assert: nil is: (nil ifNotNil: [ #notExec ]).
+      self assert: nil is: (nil ifNotNil: [ #notExec ]).
     )
 
     testIfNilIfNotNil = (
-      self assert: (nil ifNil: [ #exec ] ifNotNil: [ #notExec ]) is: #exec.
-      self assert: (self ifNil: [ #notExec ] ifNotNil: [ #exec ]) is: #exec.
+      self assert: #exec is: (nil ifNil: [ #exec ] ifNotNil: [ #notExec ]).
+      self assert: #exec is: (self ifNil: [ #notExec ] ifNotNil: [ #exec ]).
     )
 
     testIfNotNilIfNil = (

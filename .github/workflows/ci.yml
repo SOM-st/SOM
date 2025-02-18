@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   test_soms:
-    runs-on: ubuntu-20.04 # ubuntu-latest
+    runs-on: ubuntu-24.04 # ubuntu-latest
     continue-on-error: ${{ matrix.not-up-to-date }}
     strategy:
       fail-fast: false # we want all jobs to run, because they may fail independently
