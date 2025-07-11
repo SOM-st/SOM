@@ -1,0 +1,20 @@
+"
+VM:
+  status: success
+  stdout:
+    5
+    6
+    7
+"
+
+perform_witharguments = (
+    run = (
+        self perform: #f:b:c: withArguments: #(5 6 7).
+    )
+
+    f: a b: b c: c = (
+        a println.
+        b println.
+        c println.
+    )
+)

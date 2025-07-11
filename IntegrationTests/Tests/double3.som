@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Can't represent as double.
+"
+
+double3 = (
+    run = (
+        (0.1 + (1 << 1024)) println
+    )
+)

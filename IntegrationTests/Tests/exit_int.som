@@ -1,0 +1,10 @@
+"
+VM:
+  status: 42
+"
+
+exit_int = (
+    run = (
+        system exit: 42.
+    )
+)

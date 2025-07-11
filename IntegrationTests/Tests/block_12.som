@@ -1,0 +1,32 @@
+"
+VM:
+  stdout:
+    false 0
+    instance of block_12
+"
+
+block_12 = (
+    | i |
+    r: b = (
+        | x |
+        x := i.
+        b ifTrue: [
+            [
+                'true ' print.
+                x println.
+                ^b
+            ]
+          ]
+          ifFalse: [
+            'false ' print.
+            x println.
+            x := 1.
+            (self r: true) value
+        ].
+    )
+
+    run = (
+        i := 0.
+        (self r: false) println.
+    )
+)

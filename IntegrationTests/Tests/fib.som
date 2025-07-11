@@ -1,0 +1,27 @@
+"
+VM:
+  status: success
+  stdout:
+    1
+    2
+    8
+    34
+"
+
+fib = (
+    run = (
+        (self fib: 1) println.
+        (self fib: 2) println.
+        (self fib: 5) println.
+        (self fib: 8) println.
+    )
+
+    fib: n = (
+        | fibBlock |
+        fibBlock := [:n |
+          n <= 1
+            ifTrue:  1
+            ifFalse: [ (fibBlock value: n - 1) + (fibBlock value: n - 2) ] ].
+        ^ fibBlock value: n
+    )
+)

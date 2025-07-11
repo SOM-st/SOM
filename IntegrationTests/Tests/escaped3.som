@@ -1,0 +1,34 @@
+"
+VM:
+  status: success
+  stdout:
+    5
+    6
+    6
+"
+
+escaped3 = (
+    f: x = (
+        | b c |
+        b := [
+            x := x + 1.
+            x
+        ].
+        c := [ x ].
+        x := x + 1.
+        ^(b, c)
+    )
+
+    g = (
+        | a b c |
+    )
+
+    run = (
+        | arr |
+        arr := self f: 3.
+        self g.
+        (arr at: 1) value println.
+        (arr at: 1) value println.
+        (arr at: 2) value println.
+    )
+)

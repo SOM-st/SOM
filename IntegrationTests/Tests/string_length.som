@@ -1,0 +1,18 @@
+"
+VM:
+  status: success
+  stdout:
+    5
+    1
+    13
+    2
+"
+
+string_length = (
+    run = (
+        'hello' length println.
+        '❤' length println.
+        'hello ❤ world' length println.
+        ('abc' substringFrom: 1 to: 2) length println.
+    )
+)

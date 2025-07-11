@@ -1,0 +1,5 @@
+test_super = (
+    f = ( ^self g )
+    g = ( ^#b. )
+    h = ( ^#c. )
+)

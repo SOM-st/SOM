@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Expected a numeric type but got type 'String_'.
+"
+
+int_double_div_err = (
+    run = (
+        1 // 'a'
+    )
+)

@@ -1,0 +1,18 @@
+"
+VM:
+  status: success
+  stdout:
+    2
+    instance of perform_in_superclass
+"
+
+perform_in_superclass = (
+    run = (
+        self println.
+        self perform: #println inSuperclass: Object.
+    )
+
+    println = (
+        2 println.
+    )
+)

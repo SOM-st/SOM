@@ -1,0 +1,16 @@
+"
+VM:
+  status: success
+  stdout:
+    1.0
+    1.1
+    100000.19879879123
+"
+
+double1 = (
+    run = (
+        1.0 asString println.
+        1.1 asString println.
+        100000.19879879123153 asString println.
+    )
+)

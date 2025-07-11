@@ -1,0 +1,33 @@
+"
+VM:
+  stdout:
+    0
+    1
+    true
+    true
+    true
+    false
+    true
+    true
+    true
+    false
+"
+
+bool5 = (
+    run = (
+        | x |
+        x := 0.
+        true || [ x := 1 ].
+        x println.
+        false || [ x := 1 ].
+        x println.
+        (true || [ true ]) println.
+        (true || [ false ]) println.
+        (false || [ true ]) println.
+        (false || [ false ]) println.
+        (true || true) println.
+        (true || false) println.
+        (false || true) println.
+        (false || false) println.
+    )
+)

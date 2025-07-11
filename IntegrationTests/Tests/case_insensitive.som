@@ -1,0 +1,20 @@
+"
+VM:
+    status: success
+    stdout:
+        ...
+        A
+        b
+        #c
+        #D
+
+"
+
+case_insensitive = (
+    run = (
+        'a' println.
+        'B' println.
+        #C println.
+        #d println.
+    )
+)

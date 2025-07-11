@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Expected object of type 'String_' but got type 'Inst'.
+"
+
+system2 = (
+    run = (
+        system printString: system.
+    )
+)

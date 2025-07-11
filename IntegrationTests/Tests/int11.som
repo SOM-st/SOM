@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Expected a numeric type but got type 'String_'.
+"
+
+int11 = (
+    run = (
+        0 - 'a'
+    )
+)

@@ -1,0 +1,29 @@
+"
+VM:
+  status: success
+  stdout:
+    true
+    false
+    false
+    true
+    true
+    true
+    false
+    false
+    true
+"
+
+obj1 = (
+    run = (
+        (1 == 1) println.
+        (1 <> 1) println.
+        (1 ~= 1) println.
+        (1 <> 2) println.
+        (1 ~= 2) println.
+
+        (self == self) println.
+        (self <> self) println.
+        (self == 'a') println.
+        (self <> 'a') println.
+    )
+)

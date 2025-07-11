@@ -1,0 +1,18 @@
+"
+VM:
+  status: success
+  stdout:
+    instance of Block1
+"
+
+escaped2 = (
+    f = ( ^[ ^ 'a' ] )
+
+    run = (
+        self f value
+    )
+
+    escapedBlock: block = (
+        block println.
+    )
+)

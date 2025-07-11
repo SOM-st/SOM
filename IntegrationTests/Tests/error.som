@@ -1,0 +1,12 @@
+"
+VM:
+  status: error
+  stdout:
+    ERROR: abc
+"
+
+error = (
+    run = (
+        self error: 'abc'.
+    )
+)

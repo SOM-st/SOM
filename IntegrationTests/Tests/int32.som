@@ -1,0 +1,36 @@
+"
+VM:
+  status: success
+  stdout:
+    4
+    256
+    65536
+    4294967296
+    9223372036854775808
+    18446744073709551616
+    1267650600228229401496703205376
+    -128
+    256
+"
+
+int32 = (
+    run = (
+        (self raisedTo: 2 exponent: 2) println.
+        (self raisedTo: 2 exponent: 8) println.
+        (self raisedTo: 2 exponent: 16) println.
+        (self raisedTo: 2 exponent: 32) println.
+        (self raisedTo: 2 exponent: 63) println.
+        (self raisedTo: 2 exponent: 64) println.
+        (self raisedTo: 2 exponent: 100) println.
+
+        (self raisedTo: -2 exponent: 7) println.
+        (self raisedTo: -2 exponent: 8) println.
+    )
+
+    raisedTo: v exponent: e = (
+        | x |
+        x := 1.
+        e timesRepeat: [ x := x * v ].
+        ^ x
+    )
+)

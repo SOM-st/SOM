@@ -1,0 +1,19 @@
+"
+VM:
+  status: success
+  stdout:
+    instance of super_var
+    nil
+    nil
+"
+
+super_var = (
+    run = (
+        | x |
+        self println.
+        x = self.
+        x println.
+        x = super.
+        x println.
+    )
+)

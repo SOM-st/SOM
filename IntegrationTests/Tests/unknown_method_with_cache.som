@@ -1,0 +1,35 @@
+"
+VM:
+  status: success
+  stdout:
+    unknown_method_with_cache>>g
+    unknown_method_with_cache>>h
+"
+
+unknown_method_with_cache = (
+    | x |
+
+    run = (
+        self find: #g.
+        self t.
+        self find: #h.
+        self t.
+    )
+
+    find: sym = (
+        | ms |
+        ms := unknown_method_with_cache methods.
+        ms doIndexes: [:i | (((ms at: i) signature) == sym) ifTrue: [ x := i ]].
+    )
+
+    t = (
+        (self f) println.
+    )
+
+    doesNotUnderstand: selector arguments: arguments = (
+        ^ unknown_method_with_cache methods at: x.
+    )
+
+    g = ( ^ #g )
+    h = ( ^ #h )
+)

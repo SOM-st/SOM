@@ -1,0 +1,16 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    Expected instance of 'Symbol' but got instance of 'String'.
+"
+
+perform_string = (
+    run = (
+        (self perform: 'f') println.
+    )
+
+    f = ( ^#a )
+)

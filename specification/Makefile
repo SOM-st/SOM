@@ -13,7 +13,7 @@ SOMParser.class: SOMParser.java
 
 test: are-we-fast-yet SOMParser.class
 	set -e; \
-	find .. -name '*.som' -print0 | while read -d $$'\0' i; do \
+	find .. -path "../IntegrationTests" -prune -o -name '*.som' -print0 | while read -d $$'\0' i; do \
 			echo "$${i}"; \
 			OUT=`java -cp antlr.jar:. org.antlr.v4.gui.TestRig SOM classdef -diagnostics "$${i}" 2>&1`; \
 			if [ ! -z "$$OUT" ]; then \

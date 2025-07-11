@@ -1,0 +1,14 @@
+"
+VM:
+  status: error
+  stderr:
+    ...str_escape_unknown.som', line 12, column 10:
+      '\a'.
+    Unknown escape sequence '\a'
+"
+
+str_escape_unknown = (
+    run = (
+        '\a' println
+    )
+)

@@ -1,0 +1,13 @@
+"
+VM:
+  stdout:
+    a
+"
+
+method1 = (
+    f = ( ^ 'a' )
+
+    run = (
+       self f println
+    )
+)

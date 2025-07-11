@@ -1,0 +1,14 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    Division by zero or overflow.
+"
+
+remainder_zero = (
+    run = (
+        (10 rem: 0) println.
+    )
+)

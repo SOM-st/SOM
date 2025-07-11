@@ -1,0 +1,29 @@
+"
+VM:
+  status: success
+  stdout:
+    true
+    true
+    true
+    true
+    false
+"
+
+mutate_fields = (
+    | x y |
+    run = (
+        | fds |
+        fds := mutate_fields fields.
+        (fds contains: #x) println.
+        (fds contains: #y) println.
+        fds at: 1 put: #z.
+        fds := mutate_fields fields.
+        (fds contains: #x) println.
+        (fds contains: #y) println.
+        (fds contains: #z) println.
+    )
+
+    find: sym = (
+        method_holder methods do: [:e | ((e signature) == sym) ifTrue: [ ^e ]].
+    )
+)

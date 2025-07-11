@@ -1,0 +1,18 @@
+"
+VM:
+  status: success
+  stdout:
+    false
+    true
+    false
+    true
+"
+
+int18 = (
+    run = (
+        (0 = 'a') println.
+        (0 ~= 'a') println.
+        ((4611686018427387904 * 2) = 'a') println.
+        ((4611686018427387904 * 2) ~= 'a') println.
+    )
+)

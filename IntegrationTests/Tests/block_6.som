@@ -1,0 +1,16 @@
+"
+VM:
+  stdout:
+    a
+"
+
+block_6 = (
+    f = (
+        [ [ ^ 'a' ] ] value value.
+        ^'b'
+    )
+
+    run = (
+        self f println
+    )
+)

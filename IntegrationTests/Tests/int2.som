@@ -1,0 +1,26 @@
+"
+VM:
+  status: success
+  stdout:
+    2
+    0
+    -1
+    1
+    20
+    4
+    -2
+    -2
+"
+
+int2 = (
+    run = (
+        (1 + 1) println.
+        (1 - 1) println.
+        ((1 - 1) - 1) println.
+        (1 - (1 - 1)) println.
+        (2 + 3 * 4) println.
+        (20 / 5) println.
+        (4 / -2) println.
+        (-4 / 2) println.
+    )
+)

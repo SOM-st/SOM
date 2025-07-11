@@ -1,0 +1,10 @@
+test_super = (
+    | a b |
+
+    f = (
+        (self instVarAt: 1) println.
+        (self instVarAt: 2) println.
+        (self instVarAt: 3) println.
+        (self instVarAt: 4) println.
+    )
+)

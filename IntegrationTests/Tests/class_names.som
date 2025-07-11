@@ -1,0 +1,16 @@
+"
+VM:
+  status: success
+  stdout:
+    #Class
+    #Object
+    #class_names
+"
+
+class_names = (
+    run = (
+        Class name println.
+        Object name println.
+        class_names name println.
+    )
+)

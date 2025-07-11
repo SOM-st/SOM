@@ -1,0 +1,10 @@
+"
+VM:
+  stdout:
+    Hello world
+"
+
+block_3 = (
+    f = ( ^[ 'Hello world' ] )
+    run = ( self f value println )
+)

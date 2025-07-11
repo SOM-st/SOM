@@ -1,0 +1,21 @@
+"
+VM:
+  status: success
+  stdout:
+    #b
+    #c
+"
+
+test = test_super (
+    run = (
+        | g_idx h_idx ms |
+        self f println.
+        ms := test_super methods.
+        ms doIndexes: [:i |
+            (((ms at: i) signature) == #g) ifTrue: [ g_idx := i ].
+            (((ms at: i) signature) == #h) ifTrue: [ h_idx := i ].
+        ].
+        test_super methods at: g_idx put: (ms at: h_idx).
+        self f println.
+    )
+)

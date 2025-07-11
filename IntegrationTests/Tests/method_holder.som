@@ -1,0 +1,19 @@
+"
+VM:
+  status: success
+  stdout:
+    method_holder>>run
+    method_holder>>find:
+"
+
+method_holder = (
+    run = (
+        | f |
+        (self find: #run) println.
+        (self find: #find:) println.
+    )
+
+    find: sym = (
+        method_holder methods do: [:e | ((e signature) == sym) ifTrue: [ ^e ]].
+    )
+)

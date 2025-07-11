@@ -1,0 +1,14 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    Expected a numeric type but got type 'String_'.
+"
+
+shift_right_type_err = (
+    run = (
+        (1 >>> 'a') println.
+    )
+)

@@ -1,0 +1,43 @@
+"
+VM:
+  status: success
+  stdout:
+    0
+    1
+    4294967295
+    4294967295
+    0
+    4294967295
+    0
+    4294967295
+    0
+    1
+    -1
+    -1
+    0
+    -1
+    0
+    -1
+"
+
+to32bits = (
+    run = (
+        0 as32BitUnsignedValue println.
+        1 as32BitUnsignedValue println.
+        -1 as32BitUnsignedValue println.
+        4294967295 as32BitUnsignedValue println.
+        (1 << 60) as32BitUnsignedValue println.
+        ((1 << 60) - 1) as32BitUnsignedValue println.
+        (1 << 200) as32BitUnsignedValue println.
+        ((1 << 200) - 1) as32BitUnsignedValue println.
+
+        0 as32BitSignedValue println.
+        1 as32BitSignedValue println.
+        -1 as32BitSignedValue println.
+        4294967295 as32BitSignedValue println.
+        (1 << 60) as32BitSignedValue println.
+        ((1 << 60) - 1) as32BitSignedValue println.
+        (1 << 200) as32BitSignedValue println.
+        ((1 << 200) - 1) as32BitSignedValue println.
+    )
+)

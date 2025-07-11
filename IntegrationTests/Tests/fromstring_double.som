@@ -1,0 +1,28 @@
+"
+VM:
+  status: success
+  stdout:
+    0.0
+    1.0
+    -1.0
+    9999999.0
+    -9999999.0
+    0.1
+    -0.1
+    12.34
+    -12.34
+"
+
+fromstring_double = (
+    run = (
+        (Double fromString: '0') println.
+        (Double fromString: '1') println.
+        (Double fromString: '-1') println.
+        (Double fromString: '9999999') println.
+        (Double fromString: '-9999999') println.
+        (Double fromString: '0.1') println.
+        (Double fromString: '-0.1') println.
+        (Double fromString: '12.34') println.
+        (Double fromString: '-12.34') println.
+    )
+)

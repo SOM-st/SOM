@@ -1,0 +1,24 @@
+"
+VM:
+  status: success
+  stdout:
+    0
+    1
+    -1
+    9999999
+    -9999999
+    1267650600228229401496703205376
+    -1267650600228229401496703205376
+"
+
+fromstring = (
+    run = (
+        (Integer fromString: '0') println.
+        (Integer fromString: '1') println.
+        (Integer fromString: '-1') println.
+        (Integer fromString: '9999999') println.
+        (Integer fromString: '-9999999') println.
+        (Integer fromString: '1267650600228229401496703205376') println.
+        (Integer fromString: '-1267650600228229401496703205376') println.
+    )
+)

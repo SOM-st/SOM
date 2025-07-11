@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stdout:
+    ...
+    ERROR: Attempting to index string out of its bounds (start: 2 end: 1 length: 3)
+"
+
+substring_err = (
+    run = (
+        'abc' substringFrom: 2 to: 1.
+    )
+)

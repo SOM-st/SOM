@@ -1,0 +1,14 @@
+"
+VM:
+  status: success
+  stdout:
+    1
+    2
+"
+
+remainder = (
+    run = (
+        (10 rem: 3) println.
+        (20 rem: 3) println.
+    )
+)

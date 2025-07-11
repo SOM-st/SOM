@@ -1,0 +1,16 @@
+"
+VM:
+  status: success
+  stdout:
+    1.0
+    0.5403023058681398
+    -0.4161468365471424
+"
+
+cos = (
+    run = (
+        0.0 cos println.
+        1.0 cos println.
+        2.0 cos println.
+    )
+)

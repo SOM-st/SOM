@@ -1,0 +1,17 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    Can't represent as unsigned machine integer.
+"
+
+array_at_negative_idx_err = (
+    run = (
+        | x |
+
+        x := Array new.
+        x at: -1.
+    )
+)

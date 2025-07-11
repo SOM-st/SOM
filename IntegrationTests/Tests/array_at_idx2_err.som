@@ -1,0 +1,17 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    Index 2 not valid for array of length 1.
+"
+
+array_at_idx2_err = (
+    run = (
+        | x |
+
+        x := Array new: 1.
+        x at: 2.
+    )
+)

@@ -1,0 +1,27 @@
+"
+VM:
+  status: success
+  stdout:
+    5
+    ab
+    5.2
+    5
+    ab
+    5.2
+"
+
+"Test that inline caches update properly even if the receiver class at a given
+location changes."
+
+ic1 = (
+    f: lhs rhs: rhs = ( ^(lhs + rhs) )
+
+    run = (
+        (self f: 2 rhs: 3) println.
+        (self f: 'a' rhs: 'b') println.
+        (self f: 2.1 rhs: 3.1) println.
+        (self f: 2 rhs: 3) println.
+        (self f: 'a' rhs: 'b') println.
+        (self f: 2.1 rhs: 3.1) println.
+    )
+)

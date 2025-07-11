@@ -1,0 +1,18 @@
+"
+VM:
+  status: success
+  stdout:
+    Object
+    nil
+    String
+    nil
+"
+
+class_superclass = (
+    run = (
+        Integer superclass println.
+        Object superclass println.
+        Symbol superclass println.
+        Class superclass superclass println.
+    )
+)

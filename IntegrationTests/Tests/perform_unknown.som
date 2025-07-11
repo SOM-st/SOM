@@ -1,0 +1,11 @@
+"
+VM:
+  status: error
+  stdout: ERROR: Method f not found in class perform_unknown
+"
+
+perform_unknown = (
+    run = (
+        (self perform: #f) println.
+    )
+)

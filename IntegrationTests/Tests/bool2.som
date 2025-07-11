@@ -1,0 +1,9 @@
+"
+VM:
+  stdout:
+    then
+"
+
+bool2 = (
+    run = ( ( true ifTrue: [ 'then' ] ifFalse: [ 'else' ] ) println )
+)

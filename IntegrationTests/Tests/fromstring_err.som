@@ -1,0 +1,14 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    '123b' cannot be converted to an Integer.
+"
+
+fromstring_err = (
+    run = (
+        (Integer fromString: '123b') println.
+    )
+)

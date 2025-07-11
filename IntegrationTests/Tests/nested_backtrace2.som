@@ -1,0 +1,31 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback (most recent call at bottom):
+      ...
+      ...nested_backtrace2.som, line 30, column 12:
+          run = ( self m )
+      ...nested_backtrace2.som, line 26, column 8:
+              1 == 0
+                ifTrue: [ 1 / 0 ]
+                ifFalse: [ 2 / 0 ].
+      ...Boolean.som...
+              self ifFalse: [ ^falseBlock value ].
+      ...False.som...
+          ifFalse: block = ( ^block value )
+      ...Boolean.som...
+              self ifFalse: [ ^falseBlock value ].
+      ...nested_backtrace2.som, line 28, column 21:
+                ifFalse: [ 2 / 0 ].
+    Division by zero.
+"
+
+nested_backtrace2 = (
+    m = (
+        1 == 0
+          ifTrue: [ 1 / 0 ]
+          ifFalse: [ 2 / 0 ].
+    )
+    run = ( self m )
+)

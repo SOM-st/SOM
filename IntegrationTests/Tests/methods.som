@@ -1,0 +1,30 @@
+"
+VM:
+  status: success
+  stdout:
+    4
+    #a:c:
+    #f
+    #find:
+    #run
+"
+
+methods = (
+    run = (
+        | ms |
+        ms := methods methods copy.
+        ms length println.
+        self find: #a:c:.
+        self find: #f.
+        self find: #find:.
+        self find: #run.
+    )
+
+    find: sym = (
+        methods methods do: [:e | ((e signature) == sym) ifTrue: [ sym println ]].
+    )
+
+    f = ( )
+
+    a: b c: d = ( )
+)

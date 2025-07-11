@@ -1,0 +1,22 @@
+"
+VM:
+  status: success
+  stdout:
+    true
+    true
+    true
+    false
+    false
+    false
+"
+
+is_letters = (
+    run = (
+        'a' isLetters println.
+        'abcdrohtra' isLetters println.
+        'æ' isLetters println.
+        'a0' isLetters println.
+        '¾' isLetters println.
+        '' isLetters println.
+    )
+)

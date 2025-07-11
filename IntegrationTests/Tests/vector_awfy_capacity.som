@@ -1,0 +1,27 @@
+"
+VM:
+    status: success
+    custom_classpath: ./core-lib/Examples/AreWeFastYet/Core:./core-lib/Smalltalk
+    stdout:
+        50
+        100
+        10
+
+"
+
+vector_awfy_capacity = (
+    run = (
+        | vec |
+        vec := Vector new.
+        vec append: 10.
+        vec append: 20.
+
+        (vec capacity) println.
+
+        vec at: 51 put: 10.
+
+        (vec capacity) println.
+
+        (vec at: 51) println.
+    )
+)

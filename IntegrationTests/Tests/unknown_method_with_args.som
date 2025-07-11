@@ -1,0 +1,19 @@
+"
+VM:
+  status: success
+  stdout:
+    #f:y:
+    1
+    2
+"
+
+unknown_method_with_args = (
+    run = (
+        self f: 1 y: 2.
+    )
+
+    doesNotUnderstand: sym arguments: arguments = (
+        sym println.
+        arguments do: [:e | e println ].
+    )
+)

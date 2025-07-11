@@ -1,0 +1,21 @@
+"
+VM:
+  status: success
+  stdout:
+    #class_methods_fields
+    b
+"
+
+class_methods_fields = (
+    run = (
+        class_methods_fields name println.
+        class_methods_fields set: 'b'.
+        class_methods_fields get println.
+    )
+
+    ------
+    | f |
+
+    get = ( ^f )
+    set: o = ( f := o. )
+)

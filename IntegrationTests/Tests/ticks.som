@@ -1,0 +1,19 @@
+"
+VM:
+  status: success
+  stdout:
+    Integer
+"
+
+ticks = (
+    run = (
+        | i start |
+        system ticks class println.
+        start := system ticks.
+        i := 1000.
+        [i ~= 0] whileTrue: [
+            i := i - 1.
+            (start <= system ticks) ifFalse: [ system exit: 1 ].
+        ].
+    )
+)

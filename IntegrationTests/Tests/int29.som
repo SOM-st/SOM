@@ -1,0 +1,18 @@
+"
+VM:
+  status: success
+  stdout:
+    Integer
+    Integer
+    Double
+    Integer
+"
+
+int29 = (
+    run = (
+        (4 sqrt class) println.
+        ((1 << 200) sqrt class) println.
+        (3 sqrt class) println.
+        ((1 << 199) sqrt class) println.
+    )
+)

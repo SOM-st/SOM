@@ -1,0 +1,12 @@
+"
+VM:
+  status: success
+  stdout:
+    #a
+"
+
+test = (
+    run = (
+        C new test println.
+    )
+)

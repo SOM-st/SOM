@@ -1,0 +1,52 @@
+"
+VM:
+  status: success
+  stdout:
+    1
+    Integer
+    Integer class
+    Metaclass
+    Metaclass class
+    Metaclass
+    Metaclass class
+    Class
+    Object class
+    Class
+    Boolean class
+    Class
+    Object
+    nil
+    Class class
+    Metaclass
+    Object
+    Object class
+    Metaclass
+    Class
+    nil
+"
+
+metaclasses = (
+    run = (
+        1 println.
+        1 class println.
+        1 class class println.
+        1 class class class println.
+        1 class class class class println.
+        1 class class class class class println.
+        1 class class class class class class println.
+        Class println.
+        Class class superclass println.
+        Class class superclass superclass println.
+        True class superclass println.
+        Class class superclass superclass println.
+        Class superclass println.
+        Class superclass superclass println.
+        Class class println.
+        Class class class println.
+        Object println.
+        Object class println.
+        Object class class println.
+        Object class superclass println.
+        Object superclass println.
+    )
+)

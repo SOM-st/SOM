@@ -1,0 +1,34 @@
+"
+VM:
+  status: success
+  stdout:
+    0
+    1
+    nil
+    instance of Array
+    #a
+    1
+    2
+    3
+    4
+    5
+"
+
+basic_arrays = (
+    run = (
+        | x |
+
+        x := Array new.
+        x length println.
+
+        x := Array new: 1.
+        x length println.
+        (x at: 1) println.
+        (x at: 1 put: #a) println.
+        (x at: 1) println.
+
+        x := Array new: 5.
+        x doIndexes: [:y | x at: y put: y].
+        x doIndexes: [:y | (x at: y) println].
+    )
+)

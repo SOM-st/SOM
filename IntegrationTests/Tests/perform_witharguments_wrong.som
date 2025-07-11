@@ -1,0 +1,20 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    Tried passing 1 arguments to a function that requires 3.
+"
+
+perform_witharguments_wrong = (
+    run = (
+        self perform: #f:b:c: withArguments: #(5).
+    )
+
+    f: a b: b c: c = (
+        a println.
+        b println.
+        c println.
+    )
+)

@@ -1,0 +1,15 @@
+"
+VM:
+  stdout:
+    1
+    true
+    a
+"
+
+objects_evaluate_to_themselves = (
+    run = (
+        1 value println.
+        true value println.
+        'a' value println.
+    )
+)

@@ -1,0 +1,34 @@
+"
+VM:
+  status: success
+  stdout:
+    1111135
+    30
+"
+
+vars_in_nested_blocks = (
+    | field |
+    method = ( ^ 5 )
+    run = (
+        | local |
+        local := nil.
+        [ | a |
+            a := 100.
+            a := a + [ | b |
+                b := 1000.
+                b := b + [ | c |
+                    c := 10000.
+                    c := c + [ | d |
+                        d := 100000.
+                        d := d + [ | e |
+                             e := 1000000.
+                             local := 30.
+                             e := e + self method + local.
+                             e ] value.
+                        d ] value.
+                    c ] value.
+                b ] value.
+            a ] value println.
+        local println.
+    )
+)

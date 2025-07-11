@@ -1,0 +1,14 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    '123.b' cannot be converted to a Double.
+"
+
+fromstring_double_err = (
+    run = (
+        (Double fromString: '123.b') println.
+    )
+)

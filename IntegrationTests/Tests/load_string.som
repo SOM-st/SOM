@@ -1,0 +1,14 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+      ...
+    Expected instance of 'Symbol' but got instance of 'String'.
+"
+
+load_string = (
+    run = (
+        system load: 'Array'.
+    )
+)

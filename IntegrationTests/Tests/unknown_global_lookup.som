@@ -1,0 +1,15 @@
+"
+VM:
+  status: error
+  stdout:
+    1
+
+    ERROR: Tried loading 'unknown' as a class, but failed.
+"
+
+unknown_global_lookup = (
+    run = (
+        1 println.
+        unknown.
+    )
+)

@@ -1,0 +1,15 @@
+"
+VM:
+  stdout:
+    then
+    else
+"
+
+bool3 = (
+    f: arg = ( ( arg ifTrue: [ ^'then' ] ifFalse: [ ^'else' ] ) )
+
+    run = (
+        (self f: true) println.
+        (self f: false) println.
+    )
+)

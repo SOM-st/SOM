@@ -1,0 +1,25 @@
+"
+VM:
+  status: success
+  stdout:
+    1
+    2
+    4
+    3
+"
+
+test = test_super (
+    | d c |
+
+    run = (
+        self instVarAt: 1 put: 1.
+        self instVarAt: 2 put: 2.
+        self instVarAt: 3 put: 3.
+        self instVarAt: 4 put: 4.
+
+        a println.
+        b println.
+        c println.
+        d println.
+    )
+)

@@ -1,0 +1,25 @@
+"
+VM:
+  status: success
+  stdout:
+    true
+    true
+    true
+"
+
+hashcode2 = (
+    run = (
+        | litArray block |
+        self cmp: 1.1 with: 1.1.
+        
+        litArray := #().
+        block := [].
+        
+        self cmp: litArray with: litArray.
+        self cmp: block    with: block.
+    )
+
+    cmp: x with: y = (
+        ((x hashcode) = (y hashcode)) println.
+    )
+)

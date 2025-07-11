@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    No such field 'unknown' in class
+"
+
+unknown_field_write = (
+    run = (
+        unknown := '1'.
+    )
+)

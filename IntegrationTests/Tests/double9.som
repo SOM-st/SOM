@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Division by zero.
+"
+
+double9 = (
+    run = (
+        (1 << 2000) / 0.0.
+    )
+)

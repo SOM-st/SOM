@@ -1,0 +1,20 @@
+"
+VM:
+  status: success
+  stdout:
+    el
+    hello
+    h
+    ❤
+"
+
+substring = (
+    run = (
+        | x |
+        x := 'hello ❤ world'.
+        (x substringFrom: 2 to: 3) println.
+        (x substringFrom: 1 to: 5) println.
+        (x substringFrom: 1 to: 1) println.
+        (x substringFrom: 7 to: 7) println.
+    )
+)

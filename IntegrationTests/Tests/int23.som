@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Division by zero.
+"
+
+int23 = (
+    run = (
+        1 / 0.0
+    )
+)

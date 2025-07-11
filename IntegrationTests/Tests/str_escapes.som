@@ -1,0 +1,15 @@
+"
+VM:
+  status: success
+  stdout:
+    a
+    b
+    c	d\'
+"
+
+str_escapes = (
+    run = (
+        'a\nb' println.
+        'c\td\\\'' println.
+    )
+)

@@ -1,0 +1,27 @@
+"
+VM:
+  status: success
+  stdout:
+    1
+    1
+    2
+    -1
+    -1
+    -2
+    1606938044258990275541962092341162602522202993782792835301376
+    -1606938044258990275541962092341162602522202993782792835301376
+"
+
+round = (
+    run = (
+        1.0 round println.
+        1.1 round println.
+        1.9 round println.
+        -1.0 round println.
+        -1.1 round println.
+        -1.9 round println.
+
+        ((1 << 200) + 1.1) round println.
+        ((-1 << 200) - 1.1) round println.
+    )
+)

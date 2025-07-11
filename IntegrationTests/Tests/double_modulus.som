@@ -1,0 +1,20 @@
+"
+VM:
+  status: success
+  stdout:
+    0.09999999999999987
+    1.1
+    1.1
+    0.20000000000000018
+    0.42963264371141974
+"
+
+double_modulus = (
+    run = (
+        (1.2 % 1.1) println.
+        (1.1 % 6) println.
+        (1.1 % (1 << 200)) println.
+        (5 % 1.2) println.
+        ((1 << 200) % 1.2) println.
+    )
+)

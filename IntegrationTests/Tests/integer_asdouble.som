@@ -1,0 +1,20 @@
+"
+VM:
+  status: success
+  stdout:
+    0.0
+    1.0
+    -1.0
+    1.8446744073709552e19
+    -1.8446744073709552e19
+"
+
+integer_asdouble = (
+    run = (
+        0 asDouble println.
+        1 asDouble println.
+        -1 asDouble println.
+        18446744073709551616 asDouble println.
+        -18446744073709551616 asDouble println.
+    )
+)

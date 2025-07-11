@@ -1,0 +1,26 @@
+"
+VM:
+  status: success
+  stdout:
+    true
+    true
+    true
+    true
+    false
+    false
+    false
+    false
+"
+
+is_digits = (
+    run = (
+        '0' isDigits println.
+        '1' isDigits println.
+        '10' isDigits println.
+        '987987982347829374234' isDigits println.
+        '0b1' isDigits println.
+        '0_1' isDigits println.
+        'a' isDigits println.
+        '' isDigits println.
+    )
+)

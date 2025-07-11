@@ -1,0 +1,14 @@
+"
+VM:
+  status: error
+  stdout:
+    ERROR: Block has escaped and cannot be executed
+"
+
+escaped1 = (
+    f = ( ^[ ^ 'a' ] )
+
+    run = (
+        self f value
+    )
+)

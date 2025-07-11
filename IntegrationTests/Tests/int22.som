@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Shift too big.
+"
+
+int22 = (
+    run = (
+        (1 << 200) << (1 << 150).
+    )
+)

@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Expected a numeric type but got type 'String_'.
+"
+
+double_modulus_err = (
+    run = (
+        1.1 % 'a'
+    )
+)

@@ -1,0 +1,20 @@
+"
+VM:
+  status: success
+  stdout:
+    2
+    4
+    instance of perform_in_superclass_with_args
+"
+
+perform_in_superclass_with_args = (
+    run = (
+        (self ifNil: 2) println.
+        (self perform: #ifNil: withArguments: #(3) inSuperclass: Object) println.
+    )
+
+    ifNil: aBlock = (
+        aBlock println.
+        ^ 4.
+    )
+)

@@ -1,0 +1,11 @@
+"
+VM:
+  status: success
+  stdout: nil
+"
+
+empty_block = (
+    run = (
+        [] value println.
+    )
+)

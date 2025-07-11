@@ -1,0 +1,18 @@
+"
+VM:
+  stdout:
+    7
+"
+
+block_10 = (
+    f = (
+        self g: [ :x :y | ^ (x - y) ].
+        ^'b'
+    )
+
+    g: block = ( ^block value: 10 with: 3 )
+
+    run = (
+        self f println
+    )
+)

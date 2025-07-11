@@ -1,0 +1,16 @@
+"
+VM:
+  status: success
+  stdout:
+    1
+    2
+    3
+    4
+    5
+"
+
+int7 = (
+    run = (
+        1 to: 5 do: [ :i | i println. ].
+    )
+)

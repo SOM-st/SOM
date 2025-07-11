@@ -1,0 +1,39 @@
+"
+VM:
+  status: success
+  stdout:
+    #ab
+    true
+    true
+    true
+    String
+    Symbol
+    true
+    true
+    #ab:
+    #ab
+    #+
+    #+-+
+    #primitive
+"
+
+symbol1 = (
+    run = (
+        #ab println.
+        (#ab == #ab) println.
+        ((#a + #b) == #ab) println.
+        (('a' + 'b') asSymbol == #ab) println.
+        (('a' + #ab) class) println.
+        ((#ab + 'a') class) println.
+        (#ab = 'ab') println.
+        ('ab' = #ab) println.
+
+        #ab: println.
+
+        #'ab' println.
+
+        #+ println.
+        #+-+ println.
+        #primitive println.
+    )
+)

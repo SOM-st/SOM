@@ -1,0 +1,14 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Expected instance of 'Symbol' but got instance of 'String'.
+"
+
+
+system_global_put_string = (
+    run = (
+        (system global: 'ab' put: 2).
+    )
+)

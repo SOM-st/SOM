@@ -1,0 +1,16 @@
+"
+VM:
+  status: success
+  stdout:
+    ab
+    a
+"
+
+system1 = (
+    run = (
+        system printString: 'a'.
+        system printString: 'b'.
+        system printNewline.
+        system printString: 'a'.
+    )
+)

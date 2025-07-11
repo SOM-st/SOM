@@ -1,0 +1,46 @@
+"
+VM:
+  status: success
+  stdout:
+    false
+    true
+    true
+    false
+    false
+    true
+    false
+    false
+    false
+    true
+    true
+    false
+    true
+    true
+    true
+    false
+"
+
+double10 = (
+    run = (
+        (1.0 = 0) println.
+        (1.0 = 1) println.
+        (1.0 <> 0) println.
+        (1.0 <> 1) println.
+
+        (1.0 < 1) println.
+        (1.0 < 2) println.
+        (2.0 < 0) println.
+
+        (1.0 > 1) println.
+        (1.0 > 2) println.
+        (2.0 > 0) println.
+
+        (1.0 >= 1) println.
+        (1.0 >= 2) println.
+        (2.0 >= 0) println.
+
+        (1.0 <= 1) println.
+        (1.0 <= 2) println.
+        (2.0 <= 0) println.
+    )
+)

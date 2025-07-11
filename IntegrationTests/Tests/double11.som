@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Expected object of type 'Int' but got type 'Double'.
+"
+
+double11 = (
+    run = (
+        1 bitXor: 1.1.
+    )
+)

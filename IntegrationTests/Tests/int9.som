@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Division by zero.
+"
+
+int9 = (
+    run = (
+        (4611686018427387904 * 2) / 0
+    )
+)

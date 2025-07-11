@@ -1,0 +1,23 @@
+"
+VM:
+  status: success
+  stdout:
+    true
+    true
+    true
+    false
+    false
+"
+
+is_whitespace = (
+    run = (
+        "Space"
+        ' ' isWhiteSpace println.
+        "Tab"
+        '	' isWhiteSpace println.
+        "Space and tab"
+        '	 ' isWhiteSpace println.
+        ' a ' isWhiteSpace println.
+        '' isWhiteSpace println.
+    )
+)

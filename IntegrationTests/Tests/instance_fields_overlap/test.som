@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...test.som', line 10, column 23:
+      test = test_super ( | a |
+    Field 'a' is already defined in a superclass.
+"
+
+test = test_super ( | a |
+  run = (
+  )
+)

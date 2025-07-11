@@ -1,0 +1,12 @@
+"
+VM:
+  status: error
+  stderr:
+    ...call2.som', line 11, column 16:
+      m: arg1 m: arg1 = ( )
+    Variable 'arg1' shadows another of the same name
+"
+
+call2 = (
+    m: arg1 m: arg1 = ( )
+)

@@ -1,0 +1,13 @@
+"
+VM:
+  status: success
+  stdout: #a
+"
+
+perform = (
+    run = (
+        (self perform: #f) println.
+    )
+
+    f = ( ^#a )
+)

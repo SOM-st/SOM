@@ -1,0 +1,15 @@
+"
+VM:
+  stdout:
+    woo
+"
+
+block_4 = (
+    run = (
+       |x y|
+       x := 'Hello world'.
+       [ x := 'woo'] value.
+       y := [ x ].
+       y value println.
+    )
+)

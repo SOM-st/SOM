@@ -1,0 +1,14 @@
+"
+VM:
+  status: success
+  stdout:
+    1.1
+    NaN
+"
+
+double12 = (
+    run = (
+        (1.21 sqrt) println.
+        (-1.1 sqrt) println.
+    )
+)

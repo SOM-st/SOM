@@ -1,0 +1,4 @@
+B = A (
+  do = ( ^ #b )
+  test = ( ^ super do )
+)

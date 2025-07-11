@@ -1,0 +1,18 @@
+"
+VM:
+  stdout:
+    a
+"
+
+block_8 = (
+    f = (
+        self g: [ ^ 'a' ].
+        ^'b'
+    )
+
+    g: block = ( ^block value )
+
+    run = (
+        self f println
+    )
+)

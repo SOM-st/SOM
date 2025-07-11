@@ -1,0 +1,16 @@
+"
+VM:
+  status: success
+  stdout:
+    5
+    1267650600228229401496703205376
+    1.7320508075688772
+"
+
+int26 = (
+    run = (
+        (25 sqrt) println.
+        ((1 << 200) sqrt) println.
+        (3 sqrt) println.
+    )
+)

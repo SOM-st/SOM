@@ -1,0 +1,25 @@
+"
+VM:
+  status: success
+  stdout:
+    0
+    512
+    127
+    -1
+    9223372036854775807
+    9223372036854775296
+    1
+"
+
+shift_right = (
+    run = (
+        (1 >>> 1) println.
+        (1024 >>> 1) println.
+        (1023 >>> 3) println.
+        (-1 >>> 0) println.
+        (-1 >>> 1) println.
+        (-1024 >>> 1) println.
+
+        ((1 << 200) >>> 200) println.
+    )
+)

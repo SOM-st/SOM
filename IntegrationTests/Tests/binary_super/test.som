@@ -1,0 +1,15 @@
+"
+VM:
+  status: success
+  stdout: 2
+"
+
+test = superc (
+    run = (
+        (super + 1) println.
+    )
+
+    + i = (
+        ^ 0 + i
+    )
+)

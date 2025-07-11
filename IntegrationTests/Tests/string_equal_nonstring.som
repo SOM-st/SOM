@@ -1,0 +1,18 @@
+"
+VM:
+  status: success
+  stdout:
+    true
+    false
+    true
+    false
+"
+
+string_equal_nonstring = (
+    run = (
+        ('a' = 'a') println.
+        ('a' = 'b') println.
+        ('a' = #a) println.
+        ('a' = 0) println.
+    )
+)

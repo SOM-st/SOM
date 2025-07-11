@@ -1,0 +1,36 @@
+"
+VM:
+  status: success
+  stdout:
+    true
+    true
+    42
+    42
+    String
+    21
+    21
+    a
+    b
+    c
+"
+
+system_global = (
+    run = (
+        ((system global: #Integer) == Integer) println.
+        system global: #Integer put: 42.
+        ((system global: #Integer) == Integer) println.
+        Integer println.
+        (system global: #Integer) println.
+        system global: #Integer put: 'a'.
+        Integer class println.
+        system global: #ab put: 21.
+        (system global: #ab) println.
+        ab println.
+        system global: #nil put: 'a'.
+        system global: #true put: 'b'.
+        system global: #false put: 'c'.
+        nil println.
+        true println.
+        false println.
+    )
+)

@@ -1,0 +1,5 @@
+superc = (
+    x: i = (
+        (i + 1) println.
+    )
+)

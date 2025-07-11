@@ -1,0 +1,10 @@
+"
+VM:
+  stdout:
+    helloworld
+"
+
+call1 = (
+    hello: arg1 world: arg2 = ( ^ arg1 concatenate: arg2 )
+    run = ( ( self hello: 'hello' world: 'world' ) println )
+)

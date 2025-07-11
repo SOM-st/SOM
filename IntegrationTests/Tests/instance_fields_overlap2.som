@@ -1,0 +1,12 @@
+"
+VM:
+  status: error
+  stderr:
+    ...instance_fields_overlap2.som', line 11, column 9:
+      | a a |
+    Field 'a' has already been defined in this class.
+"
+
+instance_fields_overlap2 = (
+    | a a |
+)

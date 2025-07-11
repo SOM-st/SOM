@@ -1,0 +1,9 @@
+"
+VM:
+  stdout:
+    false
+"
+
+bool1 = (
+    run = ( true not println)
+)

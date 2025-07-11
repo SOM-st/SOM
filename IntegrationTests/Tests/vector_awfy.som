@@ -1,0 +1,18 @@
+"
+VM:
+    status: success
+    custom_classpath: ./core-lib/Examples/AreWeFastYet/Core:./core-lib/Smalltalk
+    stdout:
+        nil
+
+"
+
+vector_awfy = (
+    run = (
+        | vec |
+        vec := Vector new.
+        vec append: 10.
+        vec append: 20.
+        (vec at: 20) println.
+    )
+)

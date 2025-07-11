@@ -1,0 +1,143 @@
+"
+VM:
+  status: error
+  stdout:
+    #s127
+"
+
+test_literals_limit_2 = (
+    run = (
+        | temp |
+        temp := #s1.
+        temp := #s2.
+        temp := #s3.
+        temp := #s4.
+        temp := #s5.
+        temp := #s6.
+        temp := #s7.
+        temp := #s8.
+        temp := #s9.
+        temp := #s10.
+        temp := #s11.
+        temp := #s12.
+        temp := #s13.
+        temp := #s14.
+        temp := #s15.
+        temp := #s16.
+        temp := #s17.
+        temp := #s18.
+        temp := #s19.
+        temp := #s20.
+        temp := #s21.
+        temp := #s22.
+        temp := #s23.
+        temp := #s24.
+        temp := #s25.
+        temp := #s26.
+        temp := #s27.
+        temp := #s28.
+        temp := #s29.
+        temp := #s30.
+        temp := #s31.
+        temp := #s32.
+        temp := #s33.
+        temp := #s34.
+        temp := #s35.
+        temp := #s36.
+        temp := #s37.
+        temp := #s38.
+        temp := #s39.
+        temp := #s40.
+        temp := #s41.
+        temp := #s42.
+        temp := #s43.
+        temp := #s44.
+        temp := #s45.
+        temp := #s46.
+        temp := #s47.
+        temp := #s48.
+        temp := #s49.
+        temp := #s50.
+        temp := #s51.
+        temp := #s52.
+        temp := #s53.
+        temp := #s54.
+        temp := #s55.
+        temp := #s56.
+        temp := #s57.
+        temp := #s58.
+        temp := #s59.
+        temp := #s60.
+        temp := #s61.
+        temp := #s62.
+        temp := #s63.
+        temp := #s64.
+        temp := #s65.
+        temp := #s66.
+        temp := #s67.
+        temp := #s68.
+        temp := #s69.
+        temp := #s70.
+        temp := #s71.
+        temp := #s72.
+        temp := #s73.
+        temp := #s74.
+        temp := #s75.
+        temp := #s76.
+        temp := #s77.
+        temp := #s78.
+        temp := #s79.
+        temp := #s80.
+        temp := #s81.
+        temp := #s82.
+        temp := #s83.
+        temp := #s84.
+        temp := #s85.
+        temp := #s86.
+        temp := #s87.
+        temp := #s88.
+        temp := #s89.
+        temp := #s90.
+        temp := #s91.
+        temp := #s92.
+        temp := #s93.
+        temp := #s94.
+        temp := #s95.
+        temp := #s96.
+        temp := #s97.
+        temp := #s98.
+        temp := #s99.
+        temp := #s100.
+        temp := #s101.
+        temp := #s102.
+        temp := #s103.
+        temp := #s104.
+        temp := #s105.
+        temp := #s106.
+        temp := #s107.
+        temp := #s108.
+        temp := #s109.
+        temp := #s110.
+        temp := #s111.
+        temp := #s112.
+        temp := #s113.
+        temp := #s114.
+        temp := #s115.
+        temp := #s116.
+        temp := #s117.
+        temp := #s118.
+        temp := #s119.
+        temp := #s120.
+        temp := #s121.
+        temp := #s122.
+        temp := #s123.
+        temp := #s124.
+        temp := #s125.
+        temp := #s126.
+        temp := #s127.
+
+        "Take the maximum number of Literals (Would be 128 here but println. uses a symbol)"
+
+        temp println.
+    )
+)

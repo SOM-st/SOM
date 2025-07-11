@@ -1,0 +1,12 @@
+"
+VM:
+  status: success
+  stdout: nil
+"
+
+unassigned_inst_var = (
+    | x |
+    run = (
+        x println.
+    )
+)

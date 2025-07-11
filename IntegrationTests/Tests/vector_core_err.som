@@ -1,0 +1,17 @@
+"
+VM:
+    status: success
+    stdout:
+        ERROR: Vector[1..3]: Index 20 out of bounds
+
+"
+
+vector_core_err = (
+    run = (
+        | vec |
+        vec := Vector new.
+        vec append: 10.
+        vec append: 20.
+        (vec at: 20) println.
+    )
+)

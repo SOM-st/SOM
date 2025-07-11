@@ -1,0 +1,46 @@
+"
+VM:
+  status: success
+  stdout:
+    false
+    true
+    true
+    false
+    false
+    true
+    false
+    false
+    false
+    true
+    true
+    false
+    true
+    true
+    true
+    false
+"
+
+int6 = (
+    run = (
+        (1 = 0) println.
+        (1 = 1) println.
+        (1 ~= 0) println.
+        (1 ~= 1) println.
+
+        (1 < 1) println.
+        (1 < 2) println.
+        (2 < 0) println.
+
+        (1 > 1) println.
+        (1 > 2) println.
+        (2 > 0) println.
+
+        (1 >= 1) println.
+        (1 >= 2) println.
+        (2 >= 0) println.
+
+        (1 <= 1) println.
+        (1 <= 2) println.
+        (2 <= 0) println.
+    )
+)

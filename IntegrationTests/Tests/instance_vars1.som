@@ -1,0 +1,16 @@
+"
+VM:
+  status: success
+  stdout: Hello world
+"
+
+instance_vars1 = (
+    | hello |
+
+    assign_hello = ( hello := 'Hello' )
+
+    run = (
+        self assign_hello.
+        (hello concatenate: ' world') println.
+    )
+)

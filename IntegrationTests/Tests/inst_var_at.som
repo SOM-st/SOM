@@ -1,0 +1,14 @@
+"
+VM:
+  status: success
+  stdout: 5
+"
+
+inst_var_at = (
+    | x |
+
+    run = (
+        x := 5.
+        (self instVarAt: 1) println.
+    )
+)

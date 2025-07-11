@@ -1,0 +1,19 @@
+"
+VM:
+  status: success
+  stdout:
+    instance of Array
+    true
+    true
+"
+
+instance_fields = (
+    | x y |
+    run = (
+        | fds |
+        fds := instance_fields fields.
+        fds println.
+        (fds contains: #x) println.
+        (fds contains: #y) println.
+    )
+)

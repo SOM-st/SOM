@@ -1,0 +1,13 @@
+"
+VM:
+  stdout:
+    instance of method2
+"
+
+method2 = (
+    f = ( 'irrelevant' )
+
+    run = (
+       self f println
+    )
+)

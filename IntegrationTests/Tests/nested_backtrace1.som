@@ -1,0 +1,21 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback (most recent call at bottom):
+      ...
+      ...nested_backtrace1.som, line 20, column 12:
+          run = ( self m )
+      ...nested_backtrace1.som, line 17, column 18:
+                ifTrue: 1 / 0
+    Division by zero.
+"
+
+nested_backtrace1 = (
+    m = (
+        1 == 0
+          ifTrue: 1 / 0
+          ifFalse: 2 / 0.
+    )
+    run = ( self m )
+)

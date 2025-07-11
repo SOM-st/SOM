@@ -1,0 +1,16 @@
+"
+VM:
+  status: success
+  stdout:
+    nil
+    instance of System
+    1
+"
+
+system_global_unset_global = (
+    run = (
+        (system global: #ab) println.
+        (system global: #ab put: 1) println.
+        (system global: #ab) println.
+    )
+)

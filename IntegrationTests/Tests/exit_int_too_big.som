@@ -1,0 +1,13 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Domain error.
+"
+
+exit_int_too_big = (
+    run = (
+        system exit: 1 << 63.
+    )
+)

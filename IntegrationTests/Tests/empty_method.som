@@ -1,0 +1,13 @@
+"
+VM:
+  status: success
+  stdout: instance of empty_method
+"
+
+empty_method = (
+    run = (
+        self f println.
+    )
+
+    f = ()
+)

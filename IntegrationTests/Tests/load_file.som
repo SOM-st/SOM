@@ -1,0 +1,15 @@
+"
+VM:
+  status: success
+  stdout:
+    ...
+    hello_world1 = (
+        run = ( 'Hello world' println )
+    )
+"
+
+load_file = (
+    run = (
+        (system loadFile: 'core-lib/IntegrationTests/Tests/hello_world1.som') println.
+    )
+)

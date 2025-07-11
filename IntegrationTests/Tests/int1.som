@@ -1,0 +1,14 @@
+"
+VM:
+  status: success
+  stdout:
+    1
+    -1
+"
+
+int1 = (
+    run = (
+        1 println.
+        -1 println.
+    )
+)

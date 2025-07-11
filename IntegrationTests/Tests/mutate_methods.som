@@ -1,0 +1,24 @@
+"
+VM:
+  stdout:
+    #b
+    #c
+"
+
+mutate_methods = (
+    run = (
+        | g_idx h_idx ms |
+        self f println.
+        ms := mutate_methods methods.
+        ms doIndexes: [:i |
+            (((ms at: i) signature) == #g) ifTrue: [ g_idx := i ].
+            (((ms at: i) signature) == #h) ifTrue: [ h_idx := i ].
+        ].
+        mutate_methods methods at: g_idx put: (ms at: h_idx).
+        self f println.
+    )
+
+    f = ( ^self g )
+    g = ( ^#b. )
+    h = ( ^#c. )
+)

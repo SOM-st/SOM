@@ -1,0 +1,9 @@
+"
+VM:
+  status: success
+  stdout: Hello world
+"
+
+hello_world1 = (
+    run = ( 'Hello world' println )
+)

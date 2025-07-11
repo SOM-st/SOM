@@ -1,0 +1,14 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    Shift too big.
+"
+
+shift_right = (
+    run = (
+        1 >>> (1 << 100).
+    )
+)

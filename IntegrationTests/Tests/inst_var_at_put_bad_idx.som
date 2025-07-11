@@ -1,0 +1,18 @@
+"
+VM:
+  status: error
+  stderr:
+    Traceback...
+    ...
+    Index 2 not valid for array of length 1.
+"
+
+inst_var_at_put_bad_idx = (
+    | x |
+
+    run = (
+        x := 5.
+        self instVarAt: 2 put: 6.
+        x println.
+    )
+)

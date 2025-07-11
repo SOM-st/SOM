@@ -1,0 +1,19 @@
+"
+VM:
+  stdout:
+    2
+"
+
+block_5 = (
+    f = (
+       | x y |
+       x := '1'.
+       y := [ x ].
+       x := '2'.
+       ^y
+    )
+
+    run = (
+       self f value println
+    )
+)

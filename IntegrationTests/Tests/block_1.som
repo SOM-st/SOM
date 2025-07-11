@@ -1,0 +1,9 @@
+"
+VM:
+  stdout:
+    Hello world
+"
+
+block_1 = (
+    run = ( [ 'Hello world' ] value println )
+)

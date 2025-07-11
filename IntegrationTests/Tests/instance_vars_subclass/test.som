@@ -1,0 +1,14 @@
+"
+VM:
+  status: success
+  stdout:
+    2
+"
+
+test = ivsc (
+    run = (
+        i := 1.
+        self f.
+        i println.
+    )
+)

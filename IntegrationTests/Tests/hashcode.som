@@ -1,0 +1,28 @@
+"
+VM:
+  status: success
+  stdout:
+    true
+    true
+    true
+    true
+    true
+    true
+    true
+"
+
+hashcode = (
+    run = (
+        self cmp: 'a' with: 'a'.
+        self cmp: 123 with: 123.
+        self cmp: self with: self.
+        self cmp: (1<<200) with: (1<<200).
+        self cmp: hashcode with: hashcode.
+        self cmp: (hashcode methods) with: (hashcode methods).
+        self cmp: (hashcode methods at: 1) with: (hashcode methods at: 1).
+    )
+
+    cmp: x with: y = (
+        ((x hashcode) = (y hashcode)) println.
+    )
+)

@@ -1,0 +1,11 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    Division by zero.
+"
+
+double_double_div_zero_err2 = (
+    run = ( (1 << 200) // 0.0 )
+)

@@ -1,0 +1,19 @@
+"
+VM:
+  status: success
+  stdout:
+    5
+    instance of inst_var_at_put
+    6
+"
+
+inst_var_at_put = (
+    | x |
+
+    run = (
+        x := 5.
+        (self instVarAt: 1) println.
+        (self instVarAt: 1 put: 6) println.
+        x println.
+    )
+)
