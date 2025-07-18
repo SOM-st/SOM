@@ -3,6 +3,30 @@ name: Tests
 on: [push, pull_request]
 
 jobs:
+  python-style:
+    name: Python Checks
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Black, PyLint and PyTest
+        run: |
+          python -m pip install --upgrade pip
+          pip install black pylint pytest
+
+      - name: Run Black Check
+        run: |
+          black ./IntegrationTests --check --diff
+
+      - name: Run PyLint
+        run: |
+          pylint ./IntegrationTests
+
+      - name: Run PyTest
+        run: |
+          pytest -m tester ./IntegrationTests
+
   test_soms:
     runs-on: ubuntu-24.04 # ubuntu-latest
     continue-on-error: ${{ matrix.not-up-to-date }}
@@ -166,6 +190,16 @@ jobs:
 
           echo "${{ matrix.som }} $SOM_TESTS"
           eval "${{ matrix.som }} $SOM_TESTS"
+
+      - name: Run Integration Tests
+        if: ${{ matrix.som != 'spec' }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          export VM="som-vm/${{ matrix.som }}"
+          export CLASSPATH=Smalltalk
+          export TEST_EXCEPTIONS=som-vm/integration-tests.yml
+          pytest IntegrationTests
 
       # We currently test SomSom only on TruffleSOM
       - name: Test SomSom on TruffleSOM

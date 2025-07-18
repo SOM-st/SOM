@@ -1,7 +1,7 @@
 "
 VM:
     status: success
-    custom_classpath: ./core-lib/Examples/AreWeFastYet/Core:./core-lib/Smalltalk
+    custom_classpath: @AWFY:@CLASSPATH
     stdout:
         50
         100
