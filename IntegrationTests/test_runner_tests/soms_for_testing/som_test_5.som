@@ -1,0 +1,17 @@
+"
+VM:
+    status: success
+    case_sensitive: False
+    custom_classpath: one/the/outside:@AWFYtest:then/another/one
+    stdout:
+        ...
+    stderr:
+        ...
+"
+
+som_test_5 = (
+    run = (
+        'this is just for parsing / testing of som features within test_runner' println.
+        'this should not be run as part of the testing framework' println.
+    )
+)

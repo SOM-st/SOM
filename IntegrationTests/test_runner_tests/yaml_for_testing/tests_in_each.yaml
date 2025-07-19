@@ -1,0 +1,8 @@
+known_failures:
+  - Tests/mutate_superclass_method/test.som
+failing_as_unspecified:
+  - Tests/mutate_superclass_method/test.som
+unsupported:
+  - Tests/mutate_superclass_method/test.som
+do_not_run:
+  - Tests/mutate_superclass_method/test.som

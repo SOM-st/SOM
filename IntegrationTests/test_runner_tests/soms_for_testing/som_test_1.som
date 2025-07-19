@@ -1,0 +1,23 @@
+"
+VM:
+    status: success
+    stdout:
+        1
+        2
+        3
+        4
+        5
+        ...
+        10
+    stderr:
+        THIS IS AN ERROR
+        ...
+        Hello, world
+"
+
+som_test_1 = (
+    run = (
+        'this is just for parsing / testing of som features within test_runner' println.
+        'this should not be run as part of the testing framework' println.
+    )
+)
