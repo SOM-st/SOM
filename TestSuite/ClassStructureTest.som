@@ -25,12 +25,12 @@ ClassStructureTest = TestCase (
     "This is a little fragile.
      Index needs to be adapted with changing Class definition."
     m := Object methods at: 1.
-    "self expect: #class equals: m signature."
+    self assert: #class is: m signature.
 
     self optional: #invokableTypes assert: Primitive equals: m class. "Class>>#name should be a primitive."
 
-    m := Object methods at: 7.
-    "self expect: #asString equals: m signature."
+    m := Object methods at: 9.
+    self assert: #asString is: m signature.
 
     self optional: #invokableTypes assert: Method equals: m class. "Class>>#asString should be a normal method."
   )
@@ -76,8 +76,20 @@ ClassStructureTest = TestCase (
   )
 
   testInstanceFields = (
+    | names |
     self assert: 2 equals: ClassA fields length.
+
+    names := #(#a #b).
+    names doIndexes: [:i | self assert: (names at: i) is: (ClassA fields at: i)].
+
     self assert: 4 equals: ClassB fields length.
+
+    names := #(#a #b #c #d).
+    names doIndexes: [:i | self assert: (names at: i) is: (ClassB fields at: i)].
+
     self assert: 6 equals: ClassC fields length.
+
+    names := #(#a #b #c #d #e #f).
+    names doIndexes: [:i | self assert: (names at: i) is: (ClassC fields at: i)].
   )
 )
