@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install Black, PyLint and PyTest
         run: |
@@ -109,7 +109,7 @@ jobs:
     name: ${{ matrix.name }}
     steps:
       - name: Checkout SOM Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Checkout SOM VM Repository
         if: matrix.som != 'spec'

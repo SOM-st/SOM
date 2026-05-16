@@ -1,0 +1,16 @@
+"
+VM:
+  status: error
+  stderr:
+    ...
+    No such field 'c' in class
+"
+
+unknown_field_write2 = (
+  run = (
+    | b |
+    b := [ 1 println. ].
+    c := [ 2 println. ].
+    b whileTrue: c.
+  )
+)
