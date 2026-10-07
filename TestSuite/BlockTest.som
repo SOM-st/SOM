@@ -33,6 +33,17 @@ BlockTest = TestCase (
       [ [ ^ [ ^ 43 ] ] value ] value
     )
 
+    escapingBlockWithArgument = (
+      ^ [:x | ^ x ]
+    )
+
+    "Sends #value to a block with fewer arguments than this method"
+    valueOf: block keeping: a and: b = (
+      block value.
+      self assert: 1 equals: a.
+      self assert: 2 equals: b.
+    )
+
     testSimpleBlocks = (
       self assert: 42 equals: self simpleBlock value.
       self assert: 4  equals: (self incBlock value: 3).
@@ -74,6 +85,26 @@ BlockTest = TestCase (
       self assert: 666 equals: escaping_block value.
       self assert: 2 equals: escape_count.
       self assert: escaping_block is: escaped_block.
+    )
+
+    "The escaped block's arguments are popped, not those of the sender of
+     #value, which has more here"
+    testEscapedBlockFromMethodWithMoreArguments = (
+      escape_count := 0.
+      self valueOf: self escapingBlock keeping: 1 and: 2.
+      self assert: 1 equals: escape_count.
+    )
+
+    "The escaped block's arguments are popped, not those of the sender of
+     #value:, which has fewer here. 666 is the receiver of #=, so that an
+     argument left on the stack would be the receiver instead."
+    testEscapedBlockWithMoreArgumentsThanSender = (
+      | block result |
+      escape_count := 0.
+      block := self escapingBlockWithArgument.
+      result := 666 = (block value: 5).
+      self assert: result.
+      self assert: 1 equals: escape_count.
     )
 
     escapedBlock: block = (
