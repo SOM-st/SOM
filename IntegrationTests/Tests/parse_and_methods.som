@@ -1,0 +1,67 @@
+"
+VM:
+  status: success
+  stdout:
+    parse_and_methods#run
+    parse_and_methods#---
+    parse_and_methods#func2
+    Integer#+
+    Integer#-
+    Integer#*
+    Integer#/
+    Integer#//
+    Integer#%
+    Integer#rem:
+    Integer#&
+    Integer#<<
+    Integer#>>>
+    Integer#bitXor:
+    Integer#abs
+    Integer#sqrt
+    Integer#negated
+    Integer#raisedTo:
+    Integer#atRandom
+    Integer#=
+    Integer#==
+    Integer#~=
+    Integer#<
+    Integer#>
+    Integer#>=
+    Integer#<=
+    Integer#negative
+    Integer#between:and:
+    Integer#asString
+    Integer#as32BitSignedValue
+    Integer#as32BitUnsignedValue
+    Integer#asDouble
+    Integer#asInteger
+    Integer#hashcode
+    Integer#to:do:
+    Integer#to:by:do:
+    Integer#downTo:do:
+    Integer#downTo:by:do:
+    Integer#timesRepeat:
+    Integer#to:
+    Integer#max:
+    Integer#min:
+"
+
+parse_and_methods = (
+  run = (
+    parse_and_methods methods do: [ :meth |
+        meth holder print.
+        meth signature println.
+    ].
+    Integer methods do: [ :meth |
+        meth holder print.
+        meth signature println.
+    ].
+  )
+  ---
+  func = (
+    1 println.
+  )
+  func2 = (
+    2 println.
+  )
+)
