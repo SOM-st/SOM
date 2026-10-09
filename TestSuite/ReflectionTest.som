@@ -63,6 +63,22 @@ ReflectionTest = TestCase (
     self assert: #foo    equals: tmp key.
   )
 
+  testInstVarOfSubclass = (
+    | o |
+    "ClassC = ClassB ( | e f | ), ClassB = ClassA ( | c d | ), ClassA = ( | a b | )"
+    o := ClassC new.
+    o a: 1.
+    o f: 6.
+
+    self assert: 1   equals: (o instVarAt: 1).
+    self assert: nil equals: (o instVarAt: 2).
+    self assert: 6   equals: (o instVarAt: 6).
+
+    self assert: 1   equals: (o instVarNamed: #a).
+    self assert: nil equals: (o instVarNamed: #e).
+    self assert: 6   equals: (o instVarNamed: #f).
+  )
+
   testName = (
     self assert: #Object equals: Object name.
     self assert: #'Object class' equals: Object class name.
