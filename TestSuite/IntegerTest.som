@@ -374,4 +374,44 @@ IntegerTest = TestCase (
       self optional: #toBeSpecified
           assert: (big at: i)  equals: ((small at: i) max: (big   at: i)) ].
   )
+
+  testBigIntegerResultsThatFit = (
+    "A result of big integer arithmetic that fits a smaller representation
+     has to be equal to the same value made directly, both ways round."
+    | big |
+    big := 1 << 70.
+    self assert:  0 equals: big - big.
+    self assert: (big - big) = 0.
+    self assert:  5 equals: (big + 5) - big.
+    self assert: ((big + 5) - big) = 5.
+    self assert: -5 equals: big - (big + 5).
+    self assert:  3 equals: (big * 3) / big.
+    self assert: ((big * 3) / big) = 3.
+    self assert:  0 equals: big * 0.
+    self assert:  7 equals: (big + 7) % big.
+    self assert:  0 equals: big negated + big.
+    self assert: 70 equals: (big - 70) negated + big.
+  )
+
+  testBigIntegerResultsAtTheRangeBorders = (
+    "The same, for the borders of 63- and 64-bit integers, which some
+     implementations box without making them big integers."
+    | big |
+    big := 1 << 70.
+    #( 4611686018427387903  4611686018427387904
+       9223372036854775807  9223372036854775808
+      -4611686018427387904 -4611686018427387905
+      -9223372036854775808 -9223372036854775809 ) do: [:i |
+      self assert: i equals: big - (big - i).
+      self assert: (big - (big - i)) = i.
+      self assert: i equals: (big + i) - big.
+      self assert: ((big + i) - big) = i ].
+
+    self assert: 4611686018427387904 equals: 4611686018427387903 + 1.
+    self assert: (4611686018427387903 + 1) = 4611686018427387904.
+    self assert: -4611686018427387905 equals: -4611686018427387904 - 1.
+    self assert: (-4611686018427387904 - 1) = -4611686018427387905.
+    self assert: 9223372036854775808 equals: 9223372036854775807 + 1.
+    self assert: (9223372036854775807 + 1) = 9223372036854775808.
+  )
 )
