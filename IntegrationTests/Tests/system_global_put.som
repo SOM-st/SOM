@@ -1,0 +1,24 @@
+"
+VM:
+  status: success
+  stdout:
+    nil
+    1
+    2
+    2
+    a string
+    a string
+"
+system_global_put = (
+    run = (
+        (system global: #g) println.
+        system global: #g put: 1.
+        (system global: #g) println.
+        system global: #g put: 2.
+        g println.
+        (system global: #g) println.
+        system global: #g put: 'a string'.
+        (system global: #g) println.
+        g println.
+    )
+)

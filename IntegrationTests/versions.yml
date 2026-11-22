@@ -30,3 +30,5 @@
   - Tests/parse_errors/instance_fields_overlap2.som
 4:
   - Tests/round.som
+5: 
+  - Tests/system_global_put.som
