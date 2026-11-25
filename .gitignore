@@ -1,3 +1,10 @@
 Smalltalk/SOMCore.csp
 IntegrationTests/__pycache__
 IntegrationTests/.idea
+specification/*.class
+specification/*.java
+specification/*.tokens
+specification/*.interp
+specification/are-we-fast-yet
+specification/*.jar
+/SOM
